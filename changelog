@@ -1,0 +1,10 @@
+<changelogs>
+	<changelog>
+		<element>mod_simplegallery</element>
+		<type>module</type>
+		<version>1.02/version>
+		<note>
+			<item>Added dutch language</item>
+		</note>
+	</changelog>
+</changelogs>
