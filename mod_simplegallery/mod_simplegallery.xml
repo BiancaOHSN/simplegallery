@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" client="site" method="upgrade">
+	<name>mod_simplegallery</name>
+	<author>OHSN</author>
+	<creationDate>2 juli 2023</creationDate>
+	<copyright>(C) OHSN. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>info@ohsn.nl</authorEmail>
+	<authorUrl>www.ohsn.nl</authorUrl>
+	<version>1.1</version>
+	<description>MOD_SIMPLEGALLERY_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_simplegallery">mod_simplegallery.php</filename>
+		<folder>tmpl</folder>
+		<folder>language</folder>
+	</files>
+	<updateservers>
+        <server type="extension" priority="1" name="Simplegallery">https://www.ohsn-demo.nl/mod_simplegalleryupdate.xml</server>
+    </updateservers>
+	<!-- Media files -->
+	<media folder="media/mod_simplegallery" destination="mod_simplegallery">
+		<folder>js</folder>
+	</media>
+	<config>
+		<fields name="params">
+			<fieldset name="options" label="MOD_SIMPLEGALLERY_IMAGES">
+			<field
+				name="simplegalleryimages"
+				type="subform"
+				label="MOD_SIMPLEGALLERY_HEADERIMAGE_IMAGE_LABEL"
+				multiple="true"
+				layout="joomla.form.field.subform.repeatable"
+				>
+				<form>
+					<field
+						name="file"
+						type="media"
+						label="MOD_SIMPLEGALLERY_HEADERIMAGE_IMAGE_FILE_LABEL"
+					/>
+					<field
+						name="alttext"
+						type="text"
+						label="MOD_SIMPLEGALLERY_HEADERIMAGE_ALTTEXT_FILE_LABEL"
+						default=""
+					/>
+				</form>
+			</field>				
+			</fieldset>
+			<fieldset name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					class="form-select"
+					validate="moduleLayout"
+				/>
+				<field
+					name="moduleclass_sfx"
+					type="textarea"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					rows="3"
+					validate="CssIdentifier"
+				/>
+				<field
+					name="cache"
+					type="list"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					default="1"
+					filter="integer"
+					validate="options"
+					>
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="number"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					default="900"
+					filter="integer"
+				/>
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static"
+					>
+					<option value="static"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
