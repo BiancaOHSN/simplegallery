@@ -1,2 +1,3 @@
 # simple_gallery
- This module creates a simple gallery module for Joomla! 4
+ This module creates a simple gallery module with lightbox for Joomla! 4
+
