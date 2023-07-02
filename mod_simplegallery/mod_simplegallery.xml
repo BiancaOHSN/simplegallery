@@ -15,7 +15,7 @@
 		<folder>language</folder>
 	</files>
 	<updateservers>
-        <server type="extension" priority="1" name="Simplegallery">https://github.com/BiancaOHSN/simplegallery/blob/main/mod_simplegalleryupdate.xml</server>
+        <server type="extension" priority="1" name="Simplegallery">https://raw.githubusercontent.com/BiancaOHSN/simplegallery/main/mod_simplegalleryupdate.xml</server>
     </updateservers>
 	<!-- Media files -->
 	<media folder="media/mod_simplegallery" destination="mod_simplegallery">
