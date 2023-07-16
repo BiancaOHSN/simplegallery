@@ -15,4 +15,12 @@
 			<item>Changes dutch language files, there was a typo</item>
 		</note>
 	</changelog>
+		<changelog>
+		<element>mod_simplegallery</element>
+		<type>module</type>
+		<version>1.4/version>
+		<note>
+			<item>Changed update server.</item>
+		</note>
+	</changelog>
 </changelogs>
